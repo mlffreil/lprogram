@@ -55,6 +55,7 @@ namespace lprogram
                 this.DialogResult = DialogResult.None;
                 return;
             }
+            
             this.DialogResult = DialogResult.OK;
         }
     }

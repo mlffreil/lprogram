@@ -40,9 +40,8 @@ namespace lprogram
         private void buttonOK_Click(object sender, EventArgs e)
         {
             string progName = showList.SelectedItem.ToString();
-            Form1.nameLabel.Text = progName;
             SQLiteDatabase db = new SQLiteDatabase();
-            String query = "select ID from Show where Name = 'GDCTA';";
+            String query = String.Format("select ID from Show where Name = '{0}';", progName);
             Form1.showID = int.Parse(db.ExecuteScalar(query));
             this.DialogResult = DialogResult.OK;
         }

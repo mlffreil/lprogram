@@ -57,12 +57,20 @@
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.peopleMgmtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuAddParticipant = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuDeleteParticipant = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuAddExaminer = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuDeleteExaminer = new System.Windows.Forms.ToolStripMenuItem();
             this.selectParticipantToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuSelectExaminer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDeleteParticipant = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.mnuAddExaminer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuSelectExaminer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDeleteExaminer = new System.Windows.Forms.ToolStripMenuItem();
+            this.classMgmtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.testMgmtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.classMgmtToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.addClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editClassToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.scoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -283,7 +291,11 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.peopleMgmtToolStripMenuItem});
+            this.peopleMgmtToolStripMenuItem,
+            this.classMgmtToolStripMenuItem,
+            this.testMgmtToolStripMenuItem,
+            this.classMgmtToolStripMenuItem1,
+            this.scoreToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(654, 24);
@@ -348,11 +360,23 @@
             this.mnuAddParticipant.Text = "Add New Participant";
             this.mnuAddParticipant.Click += new System.EventHandler(this.mnuAddParticipant_Click);
             // 
+            // selectParticipantToolStripMenuItem
+            // 
+            this.selectParticipantToolStripMenuItem.Name = "selectParticipantToolStripMenuItem";
+            this.selectParticipantToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
+            this.selectParticipantToolStripMenuItem.Text = "Select Participant";
+            this.selectParticipantToolStripMenuItem.Click += new System.EventHandler(this.selectParticipantToolStripMenuItem_Click);
+            // 
             // mnuDeleteParticipant
             // 
             this.mnuDeleteParticipant.Name = "mnuDeleteParticipant";
             this.mnuDeleteParticipant.Size = new System.Drawing.Size(183, 22);
             this.mnuDeleteParticipant.Text = "Delete Particpant";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
             // 
             // mnuAddExaminer
             // 
@@ -361,19 +385,6 @@
             this.mnuAddExaminer.Text = "Add Examiner";
             this.mnuAddExaminer.Click += new System.EventHandler(this.mnuAddExaminer_Click);
             // 
-            // mnuDeleteExaminer
-            // 
-            this.mnuDeleteExaminer.Name = "mnuDeleteExaminer";
-            this.mnuDeleteExaminer.Size = new System.Drawing.Size(183, 22);
-            this.mnuDeleteExaminer.Text = "Delete Examiner";
-            // 
-            // selectParticipantToolStripMenuItem
-            // 
-            this.selectParticipantToolStripMenuItem.Name = "selectParticipantToolStripMenuItem";
-            this.selectParticipantToolStripMenuItem.Size = new System.Drawing.Size(183, 22);
-            this.selectParticipantToolStripMenuItem.Text = "Select Participant";
-            this.selectParticipantToolStripMenuItem.Click += new System.EventHandler(this.selectParticipantToolStripMenuItem_Click);
-            // 
             // mnuSelectExaminer
             // 
             this.mnuSelectExaminer.Name = "mnuSelectExaminer";
@@ -381,10 +392,68 @@
             this.mnuSelectExaminer.Text = "Select Examiner";
             this.mnuSelectExaminer.Click += new System.EventHandler(this.mnuSelectExaminer_Click);
             // 
-            // toolStripMenuItem2
+            // mnuDeleteExaminer
             // 
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 6);
+            this.mnuDeleteExaminer.Name = "mnuDeleteExaminer";
+            this.mnuDeleteExaminer.Size = new System.Drawing.Size(183, 22);
+            this.mnuDeleteExaminer.Text = "Delete Examiner";
+            // 
+            // classMgmtToolStripMenuItem
+            // 
+            this.classMgmtToolStripMenuItem.Name = "classMgmtToolStripMenuItem";
+            this.classMgmtToolStripMenuItem.Size = new System.Drawing.Size(82, 20);
+            this.classMgmtToolStripMenuItem.Text = "Class Mgmt";
+            // 
+            // testMgmtToolStripMenuItem
+            // 
+            this.testMgmtToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addTestToolStripMenuItem,
+            this.editTestToolStripMenuItem});
+            this.testMgmtToolStripMenuItem.Name = "testMgmtToolStripMenuItem";
+            this.testMgmtToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.testMgmtToolStripMenuItem.Text = "Test Mgmt";
+            // 
+            // addTestToolStripMenuItem
+            // 
+            this.addTestToolStripMenuItem.Name = "addTestToolStripMenuItem";
+            this.addTestToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.addTestToolStripMenuItem.Text = "Add Test";
+            this.addTestToolStripMenuItem.Click += new System.EventHandler(this.addTestToolStripMenuItem_Click);
+            // 
+            // editTestToolStripMenuItem
+            // 
+            this.editTestToolStripMenuItem.Name = "editTestToolStripMenuItem";
+            this.editTestToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.editTestToolStripMenuItem.Text = "Edit Test";
+            // 
+            // classMgmtToolStripMenuItem1
+            // 
+            this.classMgmtToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addClassToolStripMenuItem,
+            this.editClassToolStripMenuItem});
+            this.classMgmtToolStripMenuItem1.Name = "classMgmtToolStripMenuItem1";
+            this.classMgmtToolStripMenuItem1.Size = new System.Drawing.Size(82, 20);
+            this.classMgmtToolStripMenuItem1.Text = "Class Mgmt";
+            // 
+            // addClassToolStripMenuItem
+            // 
+            this.addClassToolStripMenuItem.Name = "addClassToolStripMenuItem";
+            this.addClassToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.addClassToolStripMenuItem.Text = "Add Class";
+            this.addClassToolStripMenuItem.Click += new System.EventHandler(this.addClassToolStripMenuItem_Click);
+            // 
+            // editClassToolStripMenuItem
+            // 
+            this.editClassToolStripMenuItem.Name = "editClassToolStripMenuItem";
+            this.editClassToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.editClassToolStripMenuItem.Text = "Edit Class";
+            // 
+            // scoreToolStripMenuItem
+            // 
+            this.scoreToolStripMenuItem.Name = "scoreToolStripMenuItem";
+            this.scoreToolStripMenuItem.Size = new System.Drawing.Size(48, 20);
+            this.scoreToolStripMenuItem.Text = "Score";
+            this.scoreToolStripMenuItem.Click += new System.EventHandler(this.scoreToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -461,6 +530,14 @@
         private System.Windows.Forms.ToolStripMenuItem selectParticipantToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem mnuSelectExaminer;
+        private System.Windows.Forms.ToolStripMenuItem classMgmtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem testMgmtToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editTestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem classMgmtToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addClassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editClassToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem scoreToolStripMenuItem;
     }
 }
 
